@@ -6,19 +6,18 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
 @Entity
-@Table(name ="customers2")
+@Table(name = "customers")
 public class Clientes {
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int customer_id;
 	private String name;
 	private String last_name;
 	private String phone_number;
 	private boolean is_whatsapp;
-	
+
 	public Clientes() {
 		// TODO Auto-generated constructor stub
 	}
@@ -74,13 +73,8 @@ public class Clientes {
 
 	@Override
 	public String toString() {
-		return "Id=" + customer_id + 
-				"\n name=" + name + 
-				"\n last_name=" + last_name +
-				"\n phone_number=" + phone_number + 
-				"\nis_whatsapp=" + is_whatsapp;
+		return "Id=" + customer_id + "\n name=" + name + "\n last_name=" + last_name + "\n phone_number=" + phone_number
+				+ "\nis_whatsapp=" + is_whatsapp;
 	}
-	
-	
 
 }
